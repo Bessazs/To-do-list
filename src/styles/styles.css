@@ -13,6 +13,9 @@
     padding: 0;
     margin: 0;
 }
+html{
+    font-size: 14px;
+}
 
 body{
     display: flex;
@@ -21,9 +24,9 @@ body{
     
 }
 
-
+/* Side bar */
 aside{
-    background-color: rgb(242, 242, 242);
+    background-color: rgb(233, 233, 233);
     height: 100dvh;
     color: rgb(44, 34, 85);
     padding: 4rem;
@@ -33,7 +36,8 @@ aside{
 .box-aside{
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 8rem;
+
 }
 
 
@@ -57,24 +61,193 @@ aside{
 }
 
 .icons-aside{
-
-    width: 2.5rem;
+    width: 2rem;
+}
+.nav-list{
+    list-style: none;
+    font-size: 1.4rem;
 }
 
+/* Task maaain */
 main{
     background-color: rgb(255, 255, 255);
     height: 100dvh;
-    padding: 4rem;
+    padding: 3rem 5rem ;
+
 }
 
 .box-main{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    column-gap: 20rem;
+    width: 60dvw;
+    height: 100%;
+
 
 }
 
+.box-day{
+    list-style: none;
+    font-size: 2rem;
+}
+.cards > ul{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem
+}
 
+.cards > ul >li{
+    list-style: none;
+    display: flex;
+    gap: 0.3rem;
+    font-size: 1.5rem;
+    align-items: center;
+    
+}
+
+#cards-finished > ul> li {
+    text-decoration: line-through;
+    color: rgb(185, 176, 176);
+}
+
+.mark{
+    border: 1px solid rgb(44, 34, 85);
+    border-radius: 50%;
+    height: 1.7rem;
+    width: 1.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    
+}
+
+.filmark{
+    background-color: rgb(44, 34, 85);
+    height: 1.4rem;
+    width: 1.4rem;
+    border-radius: 50%;
+}
+
+.box-container{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.divisor{
+    border: 1px solid rgb(241, 241, 241);
+}
+
+.img-prio{
+    margin-left: auto;
+}
+
+/* Register tasks and projects */
+dialog{
+    margin: auto;
+    background-color: rgb(233, 233, 233);
+    height: 50%;
+    width: 40%;
+    border: none;
+    border-radius: 20px;
+    padding: 1rem;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+input{
+    font-family: "Open Sans", sans-serif;
+}
+.menu{
+    padding: 0.5rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.5rem;
+}
+.circle{
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 1rem;
+    height: 1rem;
+}
+.box-circle{
+    display: flex;
+    gap: 0.2rem;
+}
+.btn-close{
+ display: flex;
+ align-items: center;
+
+}
+.btn-img{
+    width: 1.3rem;
+}
+.divisor-dialog{
+    border: 1px solid whitesmoke;
+}
+
+form{
+    height: 100%;
+}
+.form-row{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+}
+
+.form-row-btn{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: auto;
+    padding-right: 1rem;
+}
+.dialog-container{
+    padding: 0.5rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1.8rem;
+}
+
+#name, #description, #date, #priority{
+    border: none;
+    background-color: rgb(233, 233, 233);
+    font-size: 1.5rem;
+    padding: 0.4rem;
+    
+}
+
+#description, #date, #priority{
+    margin-left: 2.8rem;
+}
+
+#name{
+    font-size: 2.5rem;
+}
+
+#description{
+    font-size: 1;
+    resize: none;
+}
+
+.btn-save{
+    padding: 0.6rem 3rem;
+    background-color: rgb(44, 34, 85);
+    color: aliceblue;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 10px;
+}
+
+dialog::backdrop {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
+  
 
 
