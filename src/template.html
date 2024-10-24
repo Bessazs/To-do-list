@@ -12,21 +12,22 @@
     <aside>
        <div class="box-aside">
             <div class="container">
-                <div class="box-title">
+                <div class="box-title" id="addTask">
                     <img class="icons-aside" src="./icons/AdicionarTarefa.svg" alt="">
                     <h2>Adicionar tarefa</h2>
                 </div>
                 <div class="status">
                     <ul class="nav-list">
-                        <li>Página inical</li>
+                        <li>Página inicial</li>
                         <li>Hoje</li>
-                        <li>Em breve</li>
+                        <li>Essa semana</li>
+                        <li>Todas as Tarefas</li>
                     </ul>
         
                 </div>
             </div>
             <div class="container">
-                <div class="box-title">
+                <div class="box-title" id="addProject">
                     <img class="icons-aside"  src="./icons/AdicionarProjeto.svg" alt="">
                     <h2>Adicionar Projeto</h2>
                 </div>
@@ -63,7 +64,7 @@
                     
                 
                 <div class="form-row">
-                    <div class="mark"></div><input type="text" name="name" id="name" placeholder="Tarefa"></div>
+                    <div class="mark"></div><input type="text" name="name" id="name-task" placeholder="Tarefa"></div>
                     <div class="form-row"><input type="date" name="date" id="date"></div>
                     <div class="form-row"> <select name="priority" id="priority">
                         <option value="" disabled selected>Prioridade</option>
@@ -72,13 +73,35 @@
                         <option value="high">Alta</option>
                     </select></div>
                     <div class="form-row"><textarea name="description" id="description" placeholder="Descrição 🗒️" cols="30" rows="3""></textarea></div>
-                    <div class="form-row-btn"> <input class="btn-save" type="submit" value="Salvar">  </div>
+                    <div class="form-row-btn"> <input class="btn-save" id="btn-save-task"  type="submit" value="Salvar">  </div>
                 </div>
             </form>
         </dialog>
-
+           
         <dialog class="dialog-project">
 
+
+            <div class="menu">
+                <div class="box-circle">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                </div>
+
+                <div class="btn-close"><img class="btn-img" src="./icons/closeBtn.svg" alt=""></div>
+            </div>
+            <div class="divisor-dialog"></div>
+            <form action="#" method="post">
+                <div class="dialog-container">
+                    
+                
+                <div class="form-row">
+                    <div class="mark"></div><input type="text" name="name" id="name-project" placeholder="Nome do Projeto"></div>
+                </div>  
+                <div class="form-row-btn"> <input class="btn-save" id="btn-save-project" type="submit" value="Salvar">  </div>
+            </form>
+
+            
         </dialog>
 
         <div class="box-main">
@@ -99,6 +122,20 @@
             <div class="box-container">
                 <div class="box-day">
                     <h2>Amanhã</h2>
+                </div>
+                <div class="cards">
+                    <ul>
+                        <li><div class="mark"></div>Hoje <img src="./icons/PrioHigh.svg" alt="" class="img-prio"></li>
+                        <div class="divisor"></div>
+                        <li><div class="mark"></div>Essa semana <img src="./icons/PrioHigh.svg" alt="" class="img-prio"></li>
+                        <div class="divisor"></div>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="box-container">
+                <div class="box-day">
+                    <h2>Esta semana</h2>
                 </div>
                 <div class="cards">
                     <ul>

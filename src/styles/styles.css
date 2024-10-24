@@ -143,8 +143,8 @@ main{
     margin-left: auto;
 }
 
-/* Register tasks and projects */
-dialog{
+/* Register tasks*/
+.dialog-task{
     margin: auto;
     background-color: rgb(233, 233, 233);
     height: 50%;
@@ -152,7 +152,6 @@ dialog{
     border: none;
     border-radius: 20px;
     padding: 1rem;
-    overflow: hidden;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 input{
@@ -214,7 +213,7 @@ form{
     gap: 1.8rem;
 }
 
-#name, #description, #date, #priority{
+#name-task, #name-project, #description, #date, #priority{
     border: none;
     background-color: rgb(233, 233, 233);
     font-size: 1.5rem;
@@ -244,10 +243,27 @@ form{
     border-radius: 10px;
 }
 
+
+
+/* Resgister projects */
+
+
+
 dialog::backdrop {
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
   }
   
+.dialog-project{
+    margin: auto;
+    background-color: rgb(233, 233, 233);
+
+    border: none;
+    border-radius: 20px;
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+}
+
 
 
