@@ -1,6 +1,6 @@
 export class Project {
     static idTotal = 0
-    constructor(name = 'delfault', toDos = []) {
+    constructor(name = 'default', toDos = []) {
         this._name = name
         this._toDos = toDos
         this._id = ++Project.idTotal

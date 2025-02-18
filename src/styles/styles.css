@@ -50,6 +50,7 @@ aside{
 .box-title{
     display: flex;
     gap: 1rem;
+    cursor: pointer;
 }
 
 .status{
@@ -59,6 +60,10 @@ aside{
     gap: 0.5rem;
     
 }
+.divisor-aside{
+    border: 1px solid rgb(221, 215, 247);
+
+}
 
 .icons-aside{
     width: 2rem;
@@ -66,6 +71,19 @@ aside{
 .nav-list{
     list-style: none;
     font-size: 1.4rem;
+}
+
+.project{
+    display: flex;
+    justify-content: space-between;
+}
+
+.project-name, .imgTrash, .page{
+    cursor: pointer;
+}
+
+.imgTrash{
+    width: 15px;
 }
 
 /* Task maaain */
@@ -118,15 +136,28 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-   
+    cursor: pointer;
     
 }
 
-.filmark{
+.mark-disable{
+    border: 1px solid rgb(44, 34, 85);
+    border-radius: 50%;
+    height: 1.7rem;
+    width: 1.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+    
+}
+
+.fillmark{
     background-color: rgb(44, 34, 85);
     height: 1.4rem;
     width: 1.4rem;
     border-radius: 50%;
+
 }
 
 .box-container{
@@ -156,6 +187,10 @@ main{
 }
 input{
     font-family: "Open Sans", sans-serif;
+}
+
+.name-task{
+    cursor: pointer;
 }
 .menu{
     padding: 0.5rem;
@@ -213,7 +248,7 @@ form{
     gap: 1.8rem;
 }
 
-#name-task, #name-project, #description, #date, #priority{
+#name-task, #name-project, #description, #date, #priority, #project-relation{
     border: none;
     background-color: rgb(233, 233, 233);
     font-size: 1.5rem;
@@ -221,7 +256,7 @@ form{
     
 }
 
-#description, #date, #priority{
+#description, #date, #priority, #project-relation{
     margin-left: 2.8rem;
 }
 

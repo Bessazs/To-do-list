@@ -1,7 +1,6 @@
 import "../styles/styles.css";
-import { Project } from "./models/project";
-
-let projects = []
+import { cleanInputs, cleanTaks} from "./view/DOMHandler";
+import { createProject, createTodo, formateDate} from './models/controlerModel';
 
 
 const btnAddTask = document.querySelector("#addTask");
@@ -30,22 +29,41 @@ const btnSaveProject = document.querySelector("#btn-save-project")
 btnSaveProject.addEventListener('click', (Event) =>{ 
     if (nameProject.value !== ""){
       Event.preventDefault();
-      createProject(nameProject.value);
+      createProject(nameProject.value)
+      cleanInputs()
       document.querySelector('.dialog-project').close()
-    }
-    Event.preventDefault();
+    }    
+    Event.preventDefault()
 
   })
 
+const nameTodo = document.querySelector('#name-task')
+const dateTodo = document.querySelector('#date')
+const priorityTodo = document.querySelector('#priority')
+const descriptionTodo = document.querySelector('#description')
+const idProjectTodo = document.querySelector('#project-relation')
+const btnSaveTodo = document.querySelector('#btn-save-task')
+
+btnSaveTodo.addEventListener('click', (Event)=>{
+    Event.preventDefault()
+    if (nameTodo.value != '' && dateTodo.value != '') {
+        const date = formateDate(dateTodo.value)
+        createTodo(nameTodo.value, date, priorityTodo.value, descriptionTodo.value, idProjectTodo.value)
+        cleanInputs()
+        document.querySelector('.dialog-task').close()
+    }
+
+})
 
 
-function createProject(name) {
-    const project = new Project(name);
-    console.log(project.name);
-    console.log(project.id);
 
-    
-    projects.push(project)
-}
-
+const btnFinish = document.querySelectorAll('.mark')
+btnFinish.forEach(btn => {
+    console.log(btn)
+    btn.addEventListener('click', ()=>{
+        const idBtn = btn.getAttribute("class")
+        
+        
+    })
+});
 
